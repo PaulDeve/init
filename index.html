@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Tarjeta de San Valentín para Fany 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="gradient-bg"></div>
+        <div class="particles-container" id="particlesContainer"></div>
+        <div class="stars" id="starsContainer"></div>
+    </div>
+
+    <div class="main-container">
+        <!-- Encabezado interactivo -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">Feliz Día de San Valentín</h1>
+                <p class="header-subtitle">💕 Para Fany 💕</p>
+            </div>
+        </header>
+
+        <!-- Tarjeta principal con efecto 3D -->
+        <div class="card-wrapper">
+            <div class="card" id="mainCard">
+                <div class="card-glow"></div>
+                
+                <div class="card-inner">
+                    <!-- Frente de la tarjeta -->
+                    <div class="card-front">
+                        <div class="card-top">
+                            <div class="heart-container" id="heartContainer">
+                                <svg class="heart-main" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <filter id="glow">
+                                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                            <feMerge>
+                                                <feMergeNode in="coloredBlur"/>
+                                                <feMergeNode in="SourceGraphic"/>
+                                            </feMerge>
+                                        </filter>
+                                    </defs>
+                                    <path d="M50,85 C20,65 5,50 5,35 C5,20 15,10 25,10 C35,10 50,20 50,20 C50,20 65,10 75,10 C85,10 95,20 95,35 C95,50 80,65 50,85 Z" 
+                                          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+                                </svg>
+                                <div class="heart-pulse"></div>
+                                <div class="heart-glow"></div>
+                            </div>
+                            
+                            <div class="floating-hearts" id="floatingHearts">
+                                <span class="heart-float">❤️</span>
+                                <span class="heart-float">💕</span>
+                                <span class="heart-float">💖</span>
+                                <span class="heart-float">💗</span>
+                                <span class="heart-float">❤️</span>
+                            </div>
+                        </div>
+
+                        <div class="card-middle">
+                            <h1 class="title-main">¡Hola Fany!</h1>
+                            <p class="subtitle">Toca o haz clic para ver el mensaje</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <div class="decoration-line"></div>
+                        </div>
+                    </div>
+
+                    <!-- Atrás de la tarjeta (mensaje) -->
+                    <div class="card-back">
+                        <div class="card-back-header">
+                            <svg class="heart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+
+                        <div class="message-content">
+                            <h2 class="message-title">¡Feliz San Valentín!</h2>
+                            
+                            <div class="message-body">
+                                <p class="message-text">
+                                    Fany, estos días sin hablar han sido más largos,
+                                </p>
+                                <p class="message-text">
+                                    pero tú sigues en mis pensamientos mientras estudias en Puno,
+                                </p>
+                                <p class="message-text">
+                                    cursando esa carrera que requiere tanta dedicación.
+                                </p>
+                                <p class="message-text">
+                                    Admiro tu esfuerzo y tu valentía de seguir adelante.
+                                </p>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="message-closing">
+                                <p class="closing-text">Espero poder volver a conectar y hablar más,</p>
+                                <p class="closing-text">porque tu compañía y conversaciones son especiales.</p>
+                                <p class="closing-text">¡Feliz San Valentín, Fany! 💕</p>
+                            </div>
+
+                            <div class="signature-box">
+                                <p class="signature">Con todo mi corazón</p>
+                                <p class="signature-emoji">❤️💕❤️</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicador visual de voltear -->
+                <div class="flip-corner" id="flipCorner">
+                    <span class="flip-text">Voltea</span>
+                    <svg class="flip-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 4v6h6M23 20v-6h-6M20.754 5.145a10 10 0 0 0-15.68 2.208M3.246 18.855a10 10 0 0 0 15.68-2.208"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Contenedores para efectos -->
+    <div id="confetti-container"></div>
+    <div id="sparkles-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
