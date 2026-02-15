@@ -1,4 +1,39 @@
-// ===== FLIP DE LA TARJETA =====
+// ===== PANTALLA DE BIENVENIDA =====
+function initWelcomeScreen() {
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const flowersContainer = document.getElementById('flowersContainer');
+    
+    if (!welcomeScreen) return;
+    
+    // Crear ramo de flores
+    const flowers = ['🌹', '💐', '🌺'];
+    flowers.forEach(flower => {
+        const flowerEl = document.createElement('div');
+        flowerEl.className = 'flower';
+        flowerEl.textContent = flower;
+        flowersContainer.appendChild(flowerEl);
+    });
+    
+    // Esconder la pantalla de bienvenida después de 3.5 segundos
+    setTimeout(() => {
+        welcomeScreen.classList.add('hidden');
+        setTimeout(() => {
+            welcomeScreen.style.display = 'none';
+        }, 800);
+    }, 3500);
+}
+
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', initWelcomeScreen);
+
+// Si el DOM ya está cargado
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWelcomeScreen);
+} else {
+    initWelcomeScreen();
+}
+
+
 const card = document.querySelector('#mainCard');
 const resetBtn = document.getElementById('resetBtn');
 const shareBtn = document.getElementById('shareBtn');
